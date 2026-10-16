@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Husnida Jas Husin Consulting and Transformation helps organisations develop people and drive operational excellence through practical training and Lean transformation." />
+<title>Husnida Husin | Consulting & Transformation</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --page: light-dark(#f4f7fb, #0d1727);
+  --surface: light-dark(#ffffff, #142239);
+  --surface-2: light-dark(#e8eef6, #1b2d47);
+  --text: light-dark(#17263d, #f2f6fc);
+  --muted: light-dark(#5b6b80, #b4c2d5);
+  --line: light-dark(#d2dce9, #354963);
+  --gold: light-dark(#416b9c, #9bbbe2);
+  --gold-dark: light-dark(#294e7c, #c4d9f2);
+  --dark: light-dark(#10233f, #081426);
+  --white: #fffdf8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+#site-root { width: 100%; min-height: 100vh; background-color: var(--page); color: var(--text); border-radius: 0; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+.container { width: min(1140px, calc(100% - 44px)); margin: 0 auto; }
+.topline { height: 4px; background: linear-gradient(90deg, #18395f, #a9c6e8, #416b9c); }
+header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--page) 94%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 220px; }
+.brand-mark { width: 42px; height: 42px; border: 1px solid var(--gold); display: grid; place-items: center; color: var(--gold); font-family: Georgia, serif; font-size: 20px; letter-spacing: -2px; }
+.brand-name { font-size: 14px; font-weight: 800; letter-spacing: .13em; line-height: 1.2; }
+.brand-sub { color: var(--muted); font-size: 10px; letter-spacing: .06em; margin-top: 5px; }
+nav { display: flex; align-items: center; gap: 23px; font-size: 12px; color: var(--muted); }
+nav a:hover, nav a:focus { color: var(--gold); }
+.nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--gold); padding: 12px 17px; font-size: 12px; font-weight: 700; letter-spacing: .03em; transition: .2s ease; cursor: pointer; }
+.nav-cta, .button.primary { background: var(--dark); color: #f9f4e8; }
+.button.secondary { color: var(--text); background: transparent; }
+.button:hover { transform: translateY(-2px); }
+.hero { padding: 78px 0 74px; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 54px; }
+.eyebrow { color: var(--gold-dark); font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(43px, 5.6vw, 70px); line-height: 1.03; letter-spacing: -.045em; font-weight: 500; margin: 20px 0 22px; }
+h1 em { color: var(--gold); font-weight: 400; }
+.hero-copy { max-width: 590px; font-size: 17px; line-height: 1.75; color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.proofline { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 35px; color: var(--muted); font-size: 11px; }
+.proofline span:before { content: "✦"; color: var(--gold); margin-right: 8px; }
+.hero-art { min-height: 440px; position: relative; display: grid; place-items: center; background: var(--surface-2); overflow: hidden; }
+.hero-art:before { content: ""; position: absolute; width: 370px; height: 370px; border: 1px solid var(--gold); border-radius: 50%; opacity: .6; }
+.hero-art:after { content: ""; position: absolute; width: 290px; height: 290px; border: 1px solid var(--gold); border-radius: 50%; opacity: .45; }
+.art-panel { position: relative; z-index: 1; width: 74%; padding: 38px 28px; background: var(--dark); color: #f4f7fc; box-shadow: 0 24px 60px #0002; }
+.art-label { color: #b9d0ed; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.art-panel h2 { font-family: Georgia, serif; font-size: 35px; font-weight: 400; line-height: 1.1; margin: 17px 0; }
+.art-rule { width: 48px; height: 2px; background: #b9d0ed; margin: 21px 0; }
+.art-panel p { font-size: 12px; line-height: 1.7; color: #d1dced; margin-bottom: 0; }
+.float-note { position: absolute; z-index: 2; right: 5%; bottom: 7%; background: var(--surface); border: 1px solid var(--line); padding: 16px 18px; max-width: 185px; box-shadow: 0 12px 28px #0001; }
+.float-note strong { display: block; font-family: Georgia, serif; font-size: 25px; color: var(--gold); font-weight: 400; }
+.float-note small { color: var(--muted); line-height: 1.5; display: block; margin-top: 4px; }
+.section { padding: 78px 0; }
+.section.light { background: var(--surface); }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+.section-head h2 { font-family: Georgia, serif; font-size: clamp(32px, 4vw, 46px); font-weight: 400; line-height: 1.12; letter-spacing: -.025em; margin: 13px 0 0; max-width: 620px; }
+.section-head p { max-width: 360px; color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 0; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pillar { padding: 27px 25px 30px; border: 1px solid var(--line); background: var(--surface); min-height: 230px; transition: .2s; }
+.pillar:hover { border-color: var(--gold); transform: translateY(-3px); }
+.number { font-family: Georgia, serif; color: var(--gold); font-size: 25px; }
+.pillar h3 { font-family: Georgia, serif; font-size: 23px; font-weight: 400; margin: 21px 0 11px; }
+.pillar p { color: var(--muted); font-size: 13px; line-height: 1.7; margin-bottom: 0; }
+.link-arrow { color: var(--gold-dark); font-size: 12px; font-weight: 800; display: inline-block; margin-top: 20px; }
+.training-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; }
+.training-item { display: flex; align-items: start; gap: 17px; border-bottom: 1px solid var(--line); padding: 22px 4px; }
+.training-icon { width: 43px; height: 43px; display: grid; place-items: center; flex-shrink: 0; border: 1px solid var(--line); color: var(--gold); font-family: Georgia, serif; font-size: 19px; }
+.training-item h3 { font-size: 15px; margin: 1px 0 7px; }
+.training-item p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 0; }
+.about-band { display: grid; grid-template-columns: .8fr 1.2fr; gap: 54px; align-items: center; }
+.quote-card { padding: 36px; background: var(--dark); color: #f4f7fc; position: relative; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; }
+.quote-mark { font-family: Georgia, serif; color: #b9d0ed; font-size: 66px; line-height: .7; }
+.quote-card blockquote { margin: 24px 0; font-family: Georgia, serif; font-size: 27px; line-height: 1.25; }
+.quote-card small { color: #c3d0e2; letter-spacing: .08em; text-transform: uppercase; font-size: 10px; }
+.about-copy h2 { font-family: Georgia, serif; font-size: 42px; font-weight: 400; line-height: 1.12; margin: 13px 0 20px; }
+.about-copy p { color: var(--muted); font-size: 14px; line-height: 1.85; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 25px; }
+.metric { border-top: 1px solid var(--gold); padding-top: 13px; }
+.metric strong { display: block; font-family: Georgia, serif; font-size: 25px; font-weight: 400; color: var(--gold-dark); }
+.metric span { font-size: 10px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+.book-section { background: var(--dark); color: #f4f7fc; padding: 78px 0; overflow: hidden; }
+.book-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; align-items: center; }
+.book-stage { display: grid; place-items: center; min-height: 390px; background: radial-gradient(circle, #2b4770 0, #172b48 48%, #0d1727 72%); }
+.book-teaser-art { width: 245px; min-height: 315px; padding: 24px 22px; position: relative; overflow: hidden; background: linear-gradient(145deg, #24466f, #0a1628 72%); color: #f2f6fc; border: 1px solid #9bbbe2; box-shadow: 0 18px 45px #0009; display: flex; flex-direction: column; align-items: flex-start; }
+.book-teaser-art:before { content: ""; position: absolute; inset: 10px; border: 1px solid #9bbbe259; pointer-events: none; }
+.teaser-orbit { position: absolute; border: 1px solid #b9d0ed65; border-radius: 50%; pointer-events: none; }
+.orbit-one { width: 225px; height: 225px; top: 43px; right: -130px; }
+.orbit-two { width: 170px; height: 170px; top: 70px; right: -103px; }
+.teaser-monogram { position: absolute; top: 28px; right: 24px; font-family: Georgia, serif; font-size: 23px; color: #c5d9f1; letter-spacing: -.08em; }
+.teaser-kicker { position: relative; font-size: 8px; letter-spacing: .19em; color: #c5d9f1; margin-top: 9px; }
+.teaser-title { position: relative; font-family: Georgia, serif; font-size: 34px; line-height: .99; margin-top: 58px; letter-spacing: -.04em; }
+.teaser-rule { position: relative; width: 42px; height: 2px; background: #c5d9f1; margin: 19px 0 12px; }
+.teaser-subtitle { position: relative; font-size: 8px; letter-spacing: .14em; line-height: 1.6; color: #d8e5f5; }
+.teaser-author { position: relative; margin-top: auto; padding-top: 22px; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.book-copy h2 { font-family: Georgia, serif; font-size: clamp(36px, 4vw, 50px); line-height: 1.08; font-weight: 400; margin: 15px 0 19px; }
+.book-copy p { color: #c3d0e2; font-size: 14px; line-height: 1.85; }
+.book-copy .eyebrow { color: #b9d0ed; }
+.book-note { color: #b9d0ed !important; font-size: 12px !important; margin-top: 18px; }
+.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; }
+.contact-copy h2 { font-family: Georgia, serif; font-size: 42px; font-weight: 400; line-height: 1.1; margin: 13px 0 20px; }
+.contact-copy p { color: var(--muted); font-size: 14px; line-height: 1.8; }
+.contact-form { background: var(--surface); border: 1px solid var(--line); padding: 27px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 7px; color: var(--muted); }
+.field input, .field textarea, .field select { width: 100%; padding: 12px 13px; color: var(--text); background: var(--page); border: 1px solid var(--line); border-radius: 0; outline-color: var(--gold); font-size: 13px; }
+.field textarea { min-height: 95px; resize: vertical; }
+.form-message { display: none; font-size: 12px; color: var(--gold-dark); line-height: 1.6; margin-top: 14px; }
+footer { background: var(--surface-2); border-top: 1px solid var(--line); padding: 27px 0; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 11px; }
+.footer-row strong { color: var(--text); letter-spacing: .08em; }
+.disclaimer { font-size: 10px; color: var(--muted); line-height: 1.6; margin-top: 13px; }
+@media (max-width: 850px) {
+  .nav { flex-wrap: wrap; padding: 16px 0; }
+  nav { order: 3; width: 100%; overflow-x: auto; gap: 18px; padding: 6px 0; }
+  .nav-cta { margin-left: auto; }
+  .hero-grid, .about-band, .book-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 52px; }
+  .hero-art { min-height: 350px; }
+  .section-head { align-items: start; flex-direction: column; }
+  .pillars { grid-template-columns: repeat(2, 1fr); }
+  .about-band, .book-grid, .contact-grid { gap: 32px; }
+  .book-stage { min-height: 340px; }
+}
+@media (max-width: 560px) {
+  .container { width: min(100% - 30px, 1140px); }
+  .brand { min-width: 0; }
+  .brand-name { font-size: 12px; }
+  .brand-sub { font-size: 9px; }
+  .nav-cta { padding: 10px 12px; font-size: 10px; }
+  nav { font-size: 11px; }
+  .hero { padding: 42px 0 48px; }
+  .hero-grid { gap: 32px; }
+  .hero-copy { font-size: 15px; }
+  .hero-art { min-height: 310px; }
+  .art-panel { width: 76%; padding: 28px 22px; }
+  .art-panel h2 { font-size: 29px; }
+  .float-note { right: 3%; bottom: 4%; padding: 11px; max-width: 140px; }
+  .pillars, .training-grid { grid-template-columns: 1fr; }
+  .section { padding: 55px 0; }
+  .section-head h2, .about-copy h2, .contact-copy h2 { font-size: 35px; }
+  .quote-card { padding: 27px; }
+  .quote-card blockquote { font-size: 24px; }
+  .metrics { gap: 8px; }
+  .metric strong { font-size: 22px; }
+  .book-section { padding: 55px 0; }
+  .book-copy h2 { font-size: 38px; }
+  .contact-form { padding: 20px; }
+  .footer-row { align-items: start; flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div id="site-root">
+  <div class="topline"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Husnida Husin home">
+        <div class="brand-mark">HH</div>
+        <div><div class="brand-name">HUSNIDA HUSIN</div><div class="brand-sub">CONSULTING &amp; TRANSFORMATION</div></div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#training">Training</a><a href="#book">The Book</a>
+      </nav>
+      <a class="nav-cta" href="#contact">LET'S TALK ↗</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">People • Performance • Transformation</div>
+          <h1>Develop people.<br><em>Transform</em> performance.</h1>
+          <p class="hero-copy">With more than 30 years of manufacturing and regional operations leadership experience, I help organisations improve performance through practical Lean consulting, workplace training and people-centred transformation.</p>
+          <div class="hero-actions"><a class="button primary" href="#services">Explore Consulting ↗</a><a class="button secondary" href="#training">Explore Training</a></div>
+          <div class="proofline"><span>30+ years of industry experience</span><span>Practical, results-focused approach</span></div>
+        </div>
+        <div class="hero-art" aria-label="Brand statement artwork">
+          <div class="art-panel"><div class="art-label">The promise</div><h2>Better people.<br>Better processes.<br>Better results.</h2><div class="art-rule"></div><p>Developing People. Driving Operational Excellence.</p></div>
+          <div class="float-note"><strong>D.I.L.™</strong><small>Diagnose. Improve. Lead.<br>A practical path to transformation.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="services">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Consulting and training. One purpose: better performance.</h2></div><p>I work with manufacturing organisations to diagnose operational gaps, improve processes and build the people capability needed to sustain results—not just complete a project.</p></div>
+        <div class="pillars">
+          <article class="pillar"><div class="number">01</div><h3>Lean Diagnostic &amp; Transformation</h3><p>Assess current performance, identify root causes and prioritise improvements in productivity, quality, delivery, inventory and workflow.</p><a class="link-arrow" href="#approach">Explore the D.I.L.™ approach ↗</a></article>
+          <article class="pillar"><div class="number">02</div><h3>Operational Excellence &amp; Capability</h3><p>Translate improvement opportunities into practical action through Lean methods, standard work, problem-solving and performance monitoring.</p><a class="link-arrow" href="#training">Explore programmes ↗</a></article>
+          <article class="pillar"><div class="number">03</div><h3>People &amp; Leadership Development</h3><p>Strengthen supervisors, managers and women leaders through practical learning, coaching and the everyday leadership habits that sustain change.</p><a class="link-arrow" href="#about">Meet Husnida ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">The D.I.L.™ framework</div><h2>A practical path from insight to lasting improvement.</h2></div><p>My approach connects operational diagnosis with focused improvement and people leadership—so organisations can turn findings into action and build the capability to sustain results.</p></div>
+        <div class="pillars">
+          <article class="pillar"><div class="number">D</div><h3>Diagnose</h3><p>Understand the current state, identify performance gaps and uncover the root causes behind operational challenges.</p></article>
+          <article class="pillar"><div class="number">I</div><h3>Improve</h3><p>Prioritise practical solutions, strengthen processes and track meaningful improvements in quality, delivery and productivity.</p></article>
+          <article class="pillar"><div class="number">L</div><h3>Lead</h3><p>Build leadership capability, engage teams and embed the habits that help improvements last beyond the initial project.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="training">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">Training portfolio</div><h2>Learning designed for the workplace.</h2></div><p>From Lean and operational skills to supervisory and women’s leadership development, programmes can be tailored to your business needs and workforce priorities.</p></div>
+        <div class="training-grid">
+          <div class="training-item"><div class="training-icon">01</div><div><h3>Lean &amp; Continuous Improvement</h3><p>Lean Fundamentals, 5S, Kaizen, FMEA, Value Stream Mapping and Lean Execution.</p></div></div>
+          <div class="training-item"><div class="training-icon">02</div><div><h3>Manufacturing &amp; Operations</h3><p>Production Planning &amp; Control, process management, productivity and problem-solving.</p></div></div>
+          <div class="training-item"><div class="training-icon">03</div><div><h3>Supervisory &amp; People Leadership</h3><p>Modern Supervisory Skills, team effectiveness, communication and people development.</p></div></div>
+          <div class="training-item"><div class="training-icon">04</div><div><h3>Women in Leadership</h3><p>ELEVATE: Women in Leadership and practical learning inspired by real leadership experiences.</p></div></div>
+          <div class="training-item"><div class="training-icon">05</div><div><h3>Workforce Capability</h3><p>Employee flexibility, multi-skilling, capability building and sustainable performance.</p></div></div>
+          <div class="training-item"><div class="training-icon">06</div><div><h3>Business &amp; Professional Skills</h3><p>Finance for Non-Finance and other tailored programmes for stronger workplace decisions.</p></div></div>
+        </div>
+        <div style="margin-top:32px"><a class="button primary" href="#contact">Discuss Consulting or Training ↗</a></div>
+        <div style="margin-top:24px;padding:22px 24px;border:1px solid var(--line);background:var(--surface);max-width:850px">
+          <div class="eyebrow">HRD Corp claimable arrangements</div>
+          <h3 style="font-family:Georgia,serif;font-size:23px;font-weight:400;margin:12px 0">Training through our provider partners</h3>
+          <p style="color:var(--muted);font-size:13px;line-height:1.75;margin-bottom:10px">Selected training programmes may be arranged on an HRD Corp claimable basis through our collaboration with:</p>
+          <p style="font-size:13px;line-height:1.8;margin-bottom:10px"><strong>Effective Training &amp; Consultancy</strong><br><strong>The LOA Centre (M) Sdn. Bhd.</strong></p>
+          <p style="color:var(--muted);font-size:11px;line-height:1.7;margin-bottom:0">Claimability is subject to the relevant programme requirements, employer eligibility and HRD Corp grant approval. Please contact us to confirm the appropriate provider and arrangements for your programme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="about">
+      <div class="container about-band">
+        <div class="quote-card"><div class="quote-mark">“</div><blockquote>Transformation is not just about improving processes. It is about developing people who can sustain the improvement.</blockquote><small>Husnida Jas Husin · Founder &amp; Consultant</small></div>
+        <div class="about-copy"><div class="eyebrow">Experience with purpose</div><h2>Three decades of turning operational challenges into results.</h2><p>I am an operations and Lean transformation professional with more than 30 years of experience in manufacturing, regional operations leadership, people management and continuous improvement. My career includes leadership roles with Schneider Electric and Maccaferri, working across diverse teams, sites and operational environments.</p><p>I bring a practical, people-centred approach to improvement: understand the real problem, engage the people closest to the work, and build systems and leadership habits that make better performance sustainable.</p><p>My work has included Lean Manufacturing and operational excellence initiatives that delivered measurable improvements in lead time, productivity, inventory, space utilisation and cost savings.</p><div class="metrics"><div class="metric"><strong>50%</strong><span>Production lead-time reduction in improvement work</span></div><div class="metric"><strong>10%</strong><span>Productivity improvement achieved</span></div><div class="metric"><strong>RM1M</strong><span>Approximate overall savings from improvement initiatives</span></div></div><div style="margin-top:27px"><a class="button secondary" href="#contact">Discuss Your Improvement Goals ↗</a></div></div>
+      </div>
+    </section>
+
+    <section class="book-section" id="book">
+      <div class="container book-grid">
+        <div class="book-stage"><div class="book-teaser-art" aria-label="Decorative book teaser artwork, not the final cover"><div class="teaser-orbit orbit-one"></div><div class="teaser-orbit orbit-two"></div><div class="teaser-monogram">BB</div><div class="teaser-kicker">A LEADERSHIP JOURNEY</div><div class="teaser-title">Breaking<br>Barriers</div><div class="teaser-rule"></div><div class="teaser-subtitle">LEADING BEYOND LIMITS</div><div class="teaser-author">HUSNIDA JAS HUSIN</div></div></div>
+        <div class="book-copy"><div class="eyebrow">A book in progress · Coming soon</div><h2>Breaking Barriers:<br><em>Leading Beyond Limits</em></h2><p>A forthcoming book inspired by real experiences in industry and leadership — the challenges, lessons, turning points and choices that shape how we lead.</p><p>Created for women aspiring to lead, emerging professionals and anyone ready to grow beyond the limits they once believed defined them.</p><a class="button secondary" href="#contact">Register Your Interest ↗</a><p class="book-note">The manuscript is being professionally edited. This is a temporary visual teaser, not the final book cover. The final cover and publication details will be added when confirmed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy"><div class="eyebrow">Start a conversation</div><h2>Let's build better capability and better results.</h2><p>Need to improve factory performance, develop your supervisors, strengthen team capability or build a more effective continuous-improvement culture? Tell me about your priorities and we can explore a practical way forward.</p><p><strong>Husnida Jas Husin Consulting and Transformation</strong><br><span style="color:var(--muted)">SSM Registration No.: LA0088001-W</span><br><a href="mailto:husnidajashusin@outlook.com" style="color:var(--gold-dark)">husnidajashusin@outlook.com</a><br><span style="color:var(--muted)">Developing People. Driving Operational Excellence.</span></p></div>
+        <form class="contact-form" id="enquiry-form">
+          <div class="field"><label for="name">YOUR NAME</label><input id="name" name="name" placeholder="Full name" required></div>
+          <div class="field"><label for="email">WORK EMAIL</label><input id="email" name="email" type="email" placeholder="you@company.com" required></div>
+          <div class="field"><label for="interest">I'M INTERESTED IN</label><select id="interest" name="interest"><option>Corporate training</option><option>Lean consulting / operational excellence</option><option>Leadership development</option><option>Speaking or mentoring</option><option>Book updates</option><option>Other enquiry</option></select></div>
+          <div class="field"><label for="message">HOW CAN WE HELP?</label><textarea id="message" name="message" placeholder="Tell us a little about your needs..."></textarea></div>
+          <button class="button primary" type="submit">Send Enquiry ↗</button>
+          <div class="form-message" id="form-message" role="status">This website preview does not send or store form submissions yet. Please email husnidajashusin@outlook.com directly for now. Before launch, the form must be connected to a secure form service to deliver enquiries to Husnida.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><div class="footer-row"><div><strong>HUSNIDA HUSIN</strong><div style="margin-top:5px">Consulting &amp; Transformation</div><div style="margin-top:6px">SSM Registration No.: LA0088001-W</div><div style="margin-top:6px"><a href="mailto:husnidajashusin@outlook.com">husnidajashusin@outlook.com</a></div></div><div>Developing People. Driving Operational Excellence.</div><div>© <span id="year">2026</span> Husnida Jas Husin</div></div><div class="disclaimer">Website concept preview only. The enquiry form is not connected and will not deliver messages until configured before launch. Training details, credentials, privacy notice, book cover and publication details should be reviewed and confirmed before launch. The domain name has not been registered or verified.</div></div></footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('enquiry-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  document.getElementById('form-message').style.display = 'block';
+});
+</script>
+</body>
+</html>
