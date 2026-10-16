@@ -57,7 +57,9 @@ h1 em { color: var(--gold); font-weight: 400; }
 .art-panel h2 { font-family: Georgia, serif; font-size: 35px; font-weight: 400; line-height: 1.1; margin: 17px 0; }
 .art-rule { width: 48px; height: 2px; background: #b9d0ed; margin: 21px 0; }
 .art-panel p { font-size: 12px; line-height: 1.7; color: #d1dced; margin-bottom: 0; }
-.float-note { position: absolute; z-index: 2; right: 5%; bottom: 7%; background: var(--surface); border: 1px solid var(--line); padding: 16px 18px; max-width: 185px; box-shadow: 0 12px 28px #0001; }
+
+.float-note { position: relative; z-index: 3; align-self: flex-end; margin: 0 5% 0 0; background: var(--surface); border: 1px solid var(--line); padding: 12px 16px; width: min(250px, 48%); max-width: 250px; box-shadow: 0 12px 28px #0001; }
+
 .float-note strong { display: block; font-family: Georgia, serif; font-size: 25px; color: var(--gold); font-weight: 400; }
 .float-note small { color: var(--muted); line-height: 1.5; display: block; margin-top: 4px; }
 .section { padding: 78px 0; }
